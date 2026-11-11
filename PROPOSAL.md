@@ -1,6 +1,6 @@
 # Project proposal
 
-- Name: Sasha
+- Name: Aleksandra Temereva
 - Project title: Study Spots Paris
 - Pitch (one sentence): A student-made guide to the places in Paris where you can actually study (libraries, cafés, coworking spaces), rated by students on Wi-Fi, outlets, noise and price.
 - Target users: Students in Paris looking for somewhere to work outside home or campus, especially those new to the city.
