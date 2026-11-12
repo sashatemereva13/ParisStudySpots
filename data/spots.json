@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "slug": "bibliotheque-sainte-genevieve",
+    "name": "Bibliothèque Sainte-Geneviève",
+    "areaId": 5,
+    "type": "library",
+    "address": "10 place du Panthéon, 75005 Paris",
+    "openingHours": "Mon–Sat 10:00–22:00, closed Sun",
+    "coffeePrice": null
+  },
+  {
+    "id": 2,
+    "slug": "bibliotheque-mazarine",
+    "name": "Bibliothèque Mazarine",
+    "areaId": 6,
+    "type": "library",
+    "address": "23 quai de Conti, 75006 Paris",
+    "openingHours": "Mon–Sat 10:00–18:00 (Mon–Fri only in summer), closed Sun",
+    "coffeePrice": null
+  },
+  {
+    "id": 3,
+    "slug": "bnf-francois-mitterrand",
+    "name": "BnF François-Mitterrand (Haut-de-jardin)",
+    "areaId": 13,
+    "type": "library",
+    "address": "Quai François-Mauriac, 75013 Paris",
+    "openingHours": "Tue–Sat 10:00–20:00, Sun 13:00–19:00, closed Mon",
+    "coffeePrice": null
+  },
+  {
+    "id": 4,
+    "slug": "bibliotheque-sainte-barbe",
+    "name": "Bibliothèque Sainte-Barbe",
+    "areaId": 5,
+    "type": "library",
+    "address": "4 rue Valette, 75005 Paris",
+    "openingHours": "Mon–Sat 10:00–20:00, closed Sun",
+    "coffeePrice": null
+  },
+  {
+    "id": 5,
+    "slug": "bpi-lumiere",
+    "name": "Bibliothèque publique d'information (Bpi Lumière)",
+    "areaId": 12,
+    "type": "library",
+    "address": "40 avenue des Terroirs de France, 75012 Paris",
+    "openingHours": "Mon, Wed–Fri 12:00–22:00, Sat–Sun 11:00–22:00, closed Tue",
+    "coffeePrice": null
+  },
+  {
+    "id": 6,
+    "slug": "bibliotheque-germaine-tillion",
+    "name": "Bibliothèque Germaine Tillion",
+    "areaId": 16,
+    "type": "library",
+    "address": "6 rue du Commandant Schlœsing, 75016 Paris",
+    "openingHours": "Tue, Thu, Fri 13:00–19:00, Wed 10:00–19:00, Sat 10:00–18:00, closed Sun–Mon",
+    "coffeePrice": null
+  },
+  {
+    "id": 7,
+    "slug": "mediatheque-francoise-sagan",
+    "name": "Médiathèque Françoise Sagan",
+    "areaId": 10,
+    "type": "library",
+    "address": "8 rue Léon Schwartzenberg, 75010 Paris",
+    "openingHours": "Tue, Thu, Fri 13:00–19:00, Wed 10:00–19:00, Sat 10:00–18:00, Sun 13:00–18:00, closed Mon",
+    "coffeePrice": null
+  },
+  {
+    "id": 8,
+    "slug": "nuage-cafe",
+    "name": "Nuage Café",
+    "areaId": 5,
+    "type": "cafe",
+    "address": "14 rue des Carmes, 75005 Paris",
+    "openingHours": "Mon–Fri 9:00–19:00, Sat–Sun 11:00–20:00",
+    "coffeePrice": null
+  },
+  {
+    "id": 9,
+    "slug": "hubsy-arts-et-metiers",
+    "name": "Hubsy Arts & Métiers",
+    "areaId": 3,
+    "type": "coworking",
+    "address": "41 rue Réaumur, 75003 Paris",
+    "openingHours": "Mon–Fri 8:45–20:00, Sat–Sun 10:00–19:00",
+    "coffeePrice": null
+  },
+  {
+    "id": 10,
+    "slug": "hubsy-republique",
+    "name": "Hubsy République",
+    "areaId": 10,
+    "type": "coworking",
+    "address": "9B rue Lucien Sampaix, 75010 Paris",
+    "openingHours": "Mon–Fri 8:45–20:00, Sat–Sun 10:00–19:00",
+    "coffeePrice": null
+  }
+]

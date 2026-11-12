@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "slug": "1er-arrondissement",
+    "name": "1er arrondissement"
+  },
+  {
+    "id": 2,
+    "slug": "2e-arrondissement",
+    "name": "2e arrondissement"
+  },
+  {
+    "id": 3,
+    "slug": "3e-arrondissement",
+    "name": "3e arrondissement"
+  },
+  {
+    "id": 4,
+    "slug": "4e-arrondissement",
+    "name": "4e arrondissement"
+  },
+  {
+    "id": 5,
+    "slug": "5e-arrondissement",
+    "name": "5e arrondissement"
+  },
+  {
+    "id": 6,
+    "slug": "6e-arrondissement",
+    "name": "6e arrondissement"
+  },
+  {
+    "id": 7,
+    "slug": "7e-arrondissement",
+    "name": "7e arrondissement"
+  },
+  {
+    "id": 8,
+    "slug": "8e-arrondissement",
+    "name": "8e arrondissement"
+  },
+  {
+    "id": 9,
+    "slug": "9e-arrondissement",
+    "name": "9e arrondissement"
+  },
+  {
+    "id": 10,
+    "slug": "10e-arrondissement",
+    "name": "10e arrondissement"
+  },
+  {
+    "id": 11,
+    "slug": "11e-arrondissement",
+    "name": "11e arrondissement"
+  },
+  {
+    "id": 12,
+    "slug": "12e-arrondissement",
+    "name": "12e arrondissement"
+  },
+  {
+    "id": 13,
+    "slug": "13e-arrondissement",
+    "name": "13e arrondissement"
+  },
+  {
+    "id": 14,
+    "slug": "14e-arrondissement",
+    "name": "14e arrondissement"
+  },
+  {
+    "id": 15,
+    "slug": "15e-arrondissement",
+    "name": "15e arrondissement"
+  },
+  {
+    "id": 16,
+    "slug": "16e-arrondissement",
+    "name": "16e arrondissement"
+  },
+  {
+    "id": 17,
+    "slug": "17e-arrondissement",
+    "name": "17e arrondissement"
+  },
+  {
+    "id": 18,
+    "slug": "18e-arrondissement",
+    "name": "18e arrondissement"
+  },
+  {
+    "id": 19,
+    "slug": "19e-arrondissement",
+    "name": "19e arrondissement"
+  },
+  {
+    "id": 20,
+    "slug": "20e-arrondissement",
+    "name": "20e arrondissement"
+  }
+]
