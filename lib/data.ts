@@ -7,6 +7,10 @@ const areas = areasJson as Area[];
 const reviews = reviewsJson as Review[];
 const spots = spotsJson as Spot[];
 
+export async function getAreaById(id: number): Promise<Area | null> {
+  return areas.find((area) => area.id === id) ?? null;
+}
+
 export async function getAreas(): Promise<Area[]> {
   return areas;
 }
