@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "@/components/nav-link";
 
 export default function SiteHeader() {
   return (
@@ -12,10 +13,10 @@ export default function SiteHeader() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-5 text-sm text-stone-700">
-          <Link href="/">Home</Link>
-          <Link href="/spots">All spots</Link>
-          <Link href="/search">Search</Link>
-          <Link href="/spots/new">Suggest a spot</Link>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/spots">All spots</NavLink>
+          <NavLink href="/search">Search</NavLink>
+          <NavLink href="/spots/new">Suggest a spot</NavLink>
         </div>
       </nav>
     </header>
