@@ -24,6 +24,8 @@ export async function getSpots(): Promise<Spot[]> {
 }
 
 export async function getSpotBySlug(slug: string): Promise<Spot | null> {
+  // Simulate a brief lookup delay so the spot page loading state can be seen.
+  await new Promise((resolve) => setTimeout(resolve, 500));
   return spots.find((spot) => spot.slug === slug) ?? null;
 }
 
