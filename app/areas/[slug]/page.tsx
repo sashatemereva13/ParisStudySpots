@@ -1,6 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAreaBySlug, getSpotsByArea } from "@/lib/data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const area = await getAreaBySlug(slug);
+  return { title: area ? `Study spots in ${area.name} | Study Spots Paris` : "Area not found | Study Spots Paris" };
+}
 
 export default async function AreaPage({
   params,

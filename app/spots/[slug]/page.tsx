@@ -1,6 +1,19 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAreaById, getReviews, getSpotBySlug } from "@/lib/data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const spot = await getSpotBySlug(slug);
+  return {
+    title: spot ? `${spot.name} | Study Spots Paris` : "Spot not found | Study Spots Paris",
+  };
+}
 
 export default async function SpotPage({
   params,
