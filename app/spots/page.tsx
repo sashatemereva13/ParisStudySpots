@@ -1,5 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getSpots } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "All study spots | Study Spots Paris",
+  description: "Browse study spots across Paris.",
+};
 
 export default async function SpotsPage() {
   const spots = await getSpots();

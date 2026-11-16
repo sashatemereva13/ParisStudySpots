@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search study spots | Study Spots Paris",
+  description: "Search for places to study in Paris.",
+};
+
 export default function SearchPage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">

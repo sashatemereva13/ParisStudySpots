@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Suggest a spot | Study Spots Paris",
+  description: "Suggest a place in Paris where students can study.",
+};
+
 export default function NewSpotPage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
