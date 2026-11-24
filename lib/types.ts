@@ -31,6 +31,8 @@ export type Review = {
   updatedAt: string;
 };
 
+export type PublicReview = Omit<Review, "editToken">;
+
 export type CheckIn = {
   id: number;
   spotId: number;
