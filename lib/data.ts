@@ -36,3 +36,21 @@ export async function getSpotsByArea(areaId: number): Promise<Spot[]> {
 export async function getReviews(spotId: number): Promise<Review[]> {
   return reviews.filter((review) => review.spotId === spotId);
 }
+
+export async function searchSpots(
+  query: string,
+  type?: string,
+): Promise<Spot[]> {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  return spots.filter((spot) => {
+    const matchesQuery =
+      normalizedQuery.length === 0 ||
+      spot.name.toLowerCase().includes(normalizedQuery) ||
+      spot.address.toLowerCase().includes(normalizedQuery);
+
+    const matchesType = !type || spot.type === type;
+
+    return matchesQuery && matchesType;
+  });
+}
