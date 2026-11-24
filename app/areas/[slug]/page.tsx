@@ -1,7 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAreaBySlug, getSpotsByArea } from "@/lib/data";
+import { getAreas, getAreaBySlug, getSpotsByArea } from "@/lib/data";
+
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const areas = await getAreas();
+  return areas.map((area) => ({ slug: area.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -10,7 +17,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const area = await getAreaBySlug(slug);
-  return { title: area ? `Study spots in ${area.name} | Study Spots Paris` : "Area not found | Study Spots Paris" };
+  return {
+    title: area
+      ? `Study spots in ${area.name} | Study Spots Paris`
+      : "Area not found | Study Spots Paris",
+  };
 }
 
 export default async function AreaPage({

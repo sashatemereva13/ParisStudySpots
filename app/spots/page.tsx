@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getSpots } from "@/lib/data";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "All study spots | Study Spots Paris",
   description: "Browse study spots across Paris.",

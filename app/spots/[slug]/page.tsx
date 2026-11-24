@@ -1,7 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAreaById, getReviews, getSpotBySlug } from "@/lib/data";
+import { getAreaById, getReviews, getSpotBySlug, getSpots } from "@/lib/data";
+
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const spots = await getSpots();
+  return spots.map((spot) => ({ slug: spot.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -11,7 +18,9 @@ export async function generateMetadata({
   const { slug } = await params;
   const spot = await getSpotBySlug(slug);
   return {
-    title: spot ? `${spot.name} | Study Spots Paris` : "Spot not found | Study Spots Paris",
+    title: spot
+      ? `${spot.name} | Study Spots Paris`
+      : "Spot not found | Study Spots Paris",
   };
 }
 
