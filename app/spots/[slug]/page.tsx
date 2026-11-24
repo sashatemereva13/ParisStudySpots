@@ -17,10 +17,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const spot = await getSpotBySlug(slug);
+
+  if (!spot) {
+    return { title: "Spot not found | Study Spots Paris" };
+  }
+
+  const description = `${spot.name} is a ${spot.type} study spot at ${spot.address}.`;
+
   return {
-    title: spot
-      ? `${spot.name} | Study Spots Paris`
-      : "Spot not found | Study Spots Paris",
+    title: `${spot.name} | Study Spots Paris`,
+    description,
+    openGraph: {
+      title: spot.name,
+      description,
+    },
   };
 }
 
