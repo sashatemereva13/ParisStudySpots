@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAreaById, getReviews, getSpotBySlug, getSpots } from "@/lib/data";
+import { CrowdIndicator } from "@/components/crowd-indicator";
+import { ReviewsSection } from "@/components/reviews-section";
 
 export const revalidate = 60;
 
@@ -50,6 +52,9 @@ export default async function SpotPage({
     getAreaById(spot.areaId),
     getReviews(spot.id),
   ]);
+  const average = reviews.length
+    ? reviews.reduce((sum, review) => sum + review.wifi + review.outlets + review.noise + review.comfort, 0) / (reviews.length * 4)
+    : null;
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
@@ -98,30 +103,16 @@ export default async function SpotPage({
         </div>
       </dl>
 
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold text-stone-900">
-          Student reviews
-        </h2>
-        {reviews.length === 0 ? (
-          <p className="mt-3 text-stone-600">No reviews yet.</p>
-        ) : (
-          <ul className="mt-4 space-y-4">
-            {reviews.map((review) => (
-              <li
-                key={review.id}
-                className="rounded-xl border border-stone-200 p-5"
-              >
-                <p className="font-medium text-stone-900">{review.nickname}</p>
-                <p className="mt-2 text-sm text-stone-600">
-                  Wi-Fi: {review.wifi}/5 · Outlets: {review.outlets}/5 · Noise:{" "}
-                  {review.noise}/5 · Comfort: {review.comfort}/5
-                </p>
-                <p className="mt-3 text-stone-700">{review.comment}</p>
-              </li>
-            ))}
-          </ul>
-        )}
+      <section className="mt-8 rounded-xl border border-stone-200 p-5">
+        <h2 className="font-semibold text-stone-900">Student rating</h2>
+        <p className="mt-2 text-stone-600">
+          {average === null ? "No ratings yet." : `${average.toFixed(1)} / 5 from ${reviews.length} ${reviews.length === 1 ? "review" : "reviews"}`}
+        </p>
       </section>
+
+      <CrowdIndicator slug={spot.slug} />
+
+      <ReviewsSection slug={spot.slug} />
     </main>
   );
 }
